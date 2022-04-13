@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link rel = "stylesheet" href = "stylecal.css">
+</head>
+<body>
+    <div class="calendar">
+
+        <div class="col leftCol">
+          <div class="content">
+            <h1 class="date">Friday<span>August 8th</span></h1>
+          </div>
+        </div>
+  
+        <div class="col rightCol">
+          <div class="content">
+            <h2 class="year">2022</h2>
+            <ul class="month">
+              <li><a href="#" title="Jan" data-value="1">Jan</a></li>
+              <li><a href="#" title="Feb" data-value="2">Feb</a></li>
+              <li><a href="#" title="Mar" data-value="3">Mar</a></li>
+              <li><a href="#" title="Apr" data-value="4">Apr</a></li>
+              <li><a href="#" title="May" data-value="5">May</a></li>
+              <li><a href="#" title="Jun" data-value="6">Jun</a></li>
+              <li><a href="#" title="Jul" data-value="7">Jul</a></li>
+              <li><a href="#" title="Aug" data-value="8" class="today">Aug</a></li>
+              <li><a href="#" title="Sep" data-value="9">Sep</a></li>
+              <li><a href="#" title="Oct" data-value="10">Oct</a></li>
+              <li><a href="#" title="Nov" data-value="11">Nov</a></li>
+              <li><a href="#" title="Dec" data-value="12">Dec</a></li>
+            </ul>
+            <div class="ran"></div>
+            <ul class="weekday">
+              <li><a href="#" title="Mon" data-value="1">Mon</a></li>
+              <li><a href="#" title="Tue" data-value="2">Tue</a></li>
+              <li><a href="#" title="Wed" data-value="3">Wed</a></li>
+              <li><a href="#" title="Thu" data-value="4">Thu</a></li>
+              <li><a href="#" title="Fri" data-value="5">Fri</a></li>
+              <li><a href="#" title="Say" data-value="6">Sat</a></li>
+              <li><a href="#" title="Sun" data-value="7">Sun</a></li>
+            </ul>
+            <div class="ran"></div>
+            <ul class="day">
+              <script>
+                for( var i = 1; i <= 31; i += 1 ){
+                  var addClass = '';
+                  if( i === 8 ){ addClass = ' class="today"'; }
+                  
+                  switch( i ){
+                    case 7: 
+                    case 9: 
+                    case 15:
+                    case 16:
+                    case 18:
+                    case 19:
+                    case 31:
+                      addClass = ' class="event"';
+                    break;
+                  }
+  
+                  document.write( '<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>' );
+                }
+              </script>
+            </ul>
+            <div class="ran"></div>
+          </div>
+        </div>
+  
+        <div class="ran"></div>
+  
+      </div>
+</body>
+</html>
